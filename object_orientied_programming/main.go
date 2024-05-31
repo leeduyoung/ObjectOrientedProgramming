@@ -20,7 +20,10 @@ func main() {
 
 	var audiences = []*audience.Audience{
 		audience.NewAudience(
-			bag.NewBag(50000, &invitation.Invitation{When: time.Now().Add(time.Hour * 3)}),
+			bag.NewBag(
+				50000, 
+				&invitation.Invitation{When: time.Now().Add(time.Hour * 3)}
+			),
 		),
 		audience.NewAudience(
 			bag.NewBag(50000, nil),
